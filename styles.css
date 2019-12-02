@@ -1,0 +1,40 @@
+body { background-color:whitesmoke;}
+
+.wrapper {
+  flex: content;
+  max-width: 80vh;
+}
+
+h1   {color: blue;   
+}
+
+
+.brand {
+  border: 2px black solid;
+  flex-wrap: wrap;
+  max-width: 60vh;
+  color: blue;
+  }
+
+ 
+img {
+  transform: rotate(-90deg); 
+  margin-left: 400px;
+  width: 400px;
+  border-radius: 100%;
+}
+
+.blinking {
+  animation: blinkText 2s infinite;
+}
+
+@keyframes blinkText{
+  0%{ color: #000;}
+  10%{color: #000;}
+  50%{ color: transparent;}
+  /* 99%{ color: transparent;} */
+  100% {color: #000;}
+
+
+
+}
