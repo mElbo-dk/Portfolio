@@ -1,27 +1,71 @@
-body { background-color:whitesmoke;}
+body { background-color:white;}
 
 .wrapper {
-  flex: content;
-  max-width: 80vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1   {color: blue;   
 }
 
+.sidebar{
+  width: 20vw;
+  height: 230vh;
+  background-color: cornflowerblue;
+  float: left;
+}
 
 .brand {
   border: 2px black solid;
-  flex-wrap: wrap;
-  max-width: 60vh;
-  color: blue;
+  max-width: 70vw;
+  float: left;
+  
   }
 
  
-img {
+.photo {
   transform: rotate(-90deg); 
-  margin-left: 400px;
-  width: 400px;
+  margin-left: 20vw;
+  height: 20vh;
+  width: 20vh;
   border-radius: 100%;
+}
+
+
+.pr {
+  flex-direction: row;
+  max-width: 60vw;
+  margin: 3%;
+  padding: 3%;
+  border: 2px solid black;
+  border-radius: 20px;
+  float: right;
+  
+}
+
+.prTextLeft{
+  max-width: 45%;
+  float: left;
+}
+.prImageLeft{
+  float: left;
+  max-width: 45%;
+  
+}
+
+.prTextRight{
+  max-width: 45%;
+  float: right;
+}
+
+.prImageRight{
+  float: right;
+  max-width: 45%;
+}
+
+.content{
+  float: right;
+  
 }
 
 .blinking {
@@ -29,12 +73,8 @@ img {
 }
 
 @keyframes blinkText{
-  0%{ color: #000;}
+  0%{color: #000;}
   10%{color: #000;}
-  50%{ color: transparent;}
-  /* 99%{ color: transparent;} */
-  100% {color: #000;}
-
-
-
+  50%{color: transparent;}
+  100%{color: #000;}
 }
