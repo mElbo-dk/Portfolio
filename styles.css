@@ -1,80 +1,121 @@
 body { background-color:white;}
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
+.name {
+  text-align: center;
+  font-size: 10vh;
 }
 
-h1   {color: blue;   
+.title {
+  text-align: center;
+  font-size: 5vh;
 }
 
+.logo {
+  width: 3vw;
+  height: 4vh;
+}
 .sidebar{
-  width: 20vw;
-  height: 230vh;
-  background-color: cornflowerblue;
+  padding-left: 1%;
+  width: 25vw;
+  height: 100vh;
+  background-color: rgb(1, 194, 253);
   float: left;
 }
 
 .brand {
-  border: 2px black solid;
-  max-width: 70vw;
-  float: left;
   
+  border: 2px black solid;
+  border-radius: 20px;
+  margin-left: 20vw;
+  padding: 10px;
+  max-width: 60vw;
+  float: center;
   }
 
+
+
+.top {
+  background-image: url(images/background.jpg) ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  min-height: 30vh;
+}
  
 .photo {
   transform: rotate(-90deg); 
-  margin-left: 20vw;
+  margin-top: 10vh;
+  margin-left: 10vw;
   height: 20vh;
   width: 20vh;
   border-radius: 100%;
 }
 
 
-.pr {
-  flex-direction: row;
-  max-width: 60vw;
-  margin: 3%;
-  padding: 3%;
-  border: 2px solid black;
+.frame{
+  margin: 2%;
+  /* border: 2px black solid; */
   border-radius: 20px;
-  float: right;
-  
-}
-
-.prTextLeft{
-  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:  29vw;
+  height: 42vh;
   float: left;
-}
-.prImageLeft{
-  float: left;
-  max-width: 45%;
   
 }
 
-.prTextRight{
-  max-width: 45%;
-  float: right;
+
+img {
+  width: 30vw;
+  height: 30vh;
 }
 
-.prImageRight{
-  float: right;
-  max-width: 45%;
+.project .content {
+  width:30vw;
+  height:30vh;
+  margin: 2%;
 }
 
-.content{
-  float: right;
+.project{
+  position:relative;
+  padding:1%;
+  display:flex;
+  cursor:pointer;
+  overflow:hidden;
+  }
+
+.content {
+  opacity: 0;
+  color: black;
+  position:absolute;
+  top:0;
+  left:0;
+  background-color:rgba(200,200,200,0.8);
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
   
-}
+  }
 
-.blinking {
-  animation: blinkText 2s infinite;
-}
+.project .content:hover { opacity:1; }      
+.project .content .text {
+  height:0;
+  
+  opacity:1;
+  padding: 1%;
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  }
+.project .content:hover .text {
+  opacity:1;
+  margin: 0;
+  padding-right: 7%;
+  text-align: center;
+  transform: translateY(5vh);
+  -webkit-transform: translateY(5vh);
+  }
 
-@keyframes blinkText{
-  0%{color: #000;}
-  10%{color: #000;}
-  50%{color: transparent;}
-  100%{color: #000;}
-}
